@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     performLogin() {
-      Vue.axios.post('/login', this.userLogin)
+      Vue.axios.post('http://216.137.189.207:8080/questionnaire/login', this.userLogin)
       .then((response)=>{
         if( response.status == 200){
           this.connectionState = true;
