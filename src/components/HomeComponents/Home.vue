@@ -34,7 +34,7 @@ export default {
     methods:{
         loadUser(){
             const headers = this.getAccessHeader()
-            Vue.axios.get('/profile',{headers})
+            axios.get('/profile',{headers})
             .then(response=>{
                 this.user = response.data
                 this.storeUser(this.user)
