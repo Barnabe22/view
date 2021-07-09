@@ -195,7 +195,7 @@ export default {
             //this.decreaseCount()
             const headers = this.getAccessHeader()
             Vue.axios
-            .post('/rapports', this.rapports,{headers})
+            .post(this.$store.state.baseUrl +'/rapports', this.rapports,{headers})
             .then(() => {
                 this.showMsgBox("Confirmation", "Rapport soumis avec succès", "success");
             }).catch(()=>{

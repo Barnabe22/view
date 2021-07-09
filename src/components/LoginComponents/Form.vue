@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     performLogin() {
-      axios.post('/login', this.userLogin)
+      Vue.axios.post(this.$store.state.baseUrl +'/login', this.userLogin)
       .then((response)=>{
         if( response.status == 200){
           this.connectionState = true;

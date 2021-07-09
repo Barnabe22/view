@@ -104,7 +104,7 @@ const router = new VueRouter({
 const store = new Vuex.Store({
   state: {
     count: 0,
-    baseUrl:'',
+    baseUrl:'http://neodfs.com:8080/questionnaire',
     user:undefined,
     pseudo:'',
     accessToken:'',
@@ -152,7 +152,7 @@ Vue.mixin({
     },
     refreshAccessToken:function(){
       const headers= {'Authorization':'Bearer '+this.$store.state.refreshToken}
-      Vue.axios.get('/refreshToken',{headers})
+      Vue.axios.get(this.$store.state.baseUrl +'/refreshToken',{headers})
       .then((response)=>{
         if( response.status == 200){
           this.$store.commit("setAccessToken",response.data.access_token)
