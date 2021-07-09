@@ -104,7 +104,7 @@ const router = new VueRouter({
 const store = new Vuex.Store({
   state: {
     count: 0,
-    baseUrl:'http://neodfs.com:8080/questionnaire',
+    baseUrl:'https://neodfs.com:8080/questionnaire',
     user:undefined,
     pseudo:'',
     accessToken:'',
